@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>排班表</title>
+  <title>表哥班表</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -204,7 +204,7 @@
       <div class="title-row">
         <div class="title-icon">📅</div>
         <div>
-          <div class="title-text">排班表</div>
+          <div class="title-text">表哥班表</div>
           <div class="title-sub">上 1 休 2 排班日历</div>
         </div>
       </div>
@@ -270,12 +270,7 @@
         </div>
       </div>
 
-      <!-- Anchor setter -->
-      <div class="anchor-card">
-        <div class="anchor-head">校准排班周期</div>
-        <div class="anchor-hint">输入一个已知的上班日期，日历会据此自动推算</div>
-        <input type="date" class="anchor-input" v-model="anchorDateStr" />
-      </div>
+
 
     </div>
   </div>
@@ -293,7 +288,7 @@
 
         const pad = n => String(n).padStart(2, '0');
         const fmt = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
-        const anchorDateStr = ref(fmt(today));
+        const anchorDateStr = ref('2026-05-27');
 
         const weekDays = ['一','二','三','四','五','六','日'];
 
